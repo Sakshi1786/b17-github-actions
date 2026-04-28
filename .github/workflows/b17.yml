@@ -9,5 +9,14 @@ jobs:
             - name: print a message
               run: echo "Hello b17 this is my first workflow"
 
+            
+            - name: do thi calculation
+              run: expr 10 + 874
+
+            - name: check os info of runner
+              run : cat /etc/os-release
+
+
+
 
 
