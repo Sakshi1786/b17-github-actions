@@ -12,7 +12,7 @@ jobs:
             - name: build and push docker image
               run : |
                   cd b17-github-actions
-                  docker build -t mynewimage:latest .
+                  docker buildx build --load -t mynewimage:latest .
                   
 
             - name: login to dockerhub
@@ -22,8 +22,8 @@ jobs:
 
             - name : tag and push the image
               run:  |
-                    docker tag myimage:latest ${{ secrets.DOCKER_HUB_USERNAME }}/myimage:latest:latest
-                    docker push ${{ secrets.DOCKER_HUB_USERNAME }}/myimage:latest
+                    docker tag mynewimage:latest ${{ secrets.DOCKER_HUB_USERNAME }}/mynewimage:latest
+                    docker push ${{ secrets.DOCKER_HUB_USERNAME }}/mynewimage:latest
 
 
 
