@@ -12,7 +12,7 @@ jobs:
             - name: build and push docker image
               run : |
                   cd b17-github-actions
-                  docker build -t mynewimage:latest
+                  docker build -t mynewimage:latest .
                   
 
             - name: login to dockerhub
