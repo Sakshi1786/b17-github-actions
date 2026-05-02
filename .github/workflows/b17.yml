@@ -4,7 +4,7 @@ on : workflow_dispatch
 
 jobs:
     buildandpush:
-        runs-on: [ self-hosted, X64 ]
+        runs-on: ubuntu-latest
         steps:
             - name : checkout code
               uses : actions/checkout@v6
